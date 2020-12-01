@@ -17,9 +17,7 @@ public class UesrController {
 
 
     @RequestMapping(value = "/selectuserbyid",method = RequestMethod.GET)
-    public String selectUserByid(@RequestParam(value = "id") Integer id
-
-    ){
+    public String selectUserByid(@RequestParam(value = "id") Integer id){
         if (null !=id) {
             User obj= userservice.selectByPrimaryKey(id);
             System.out.println(obj.toString());
